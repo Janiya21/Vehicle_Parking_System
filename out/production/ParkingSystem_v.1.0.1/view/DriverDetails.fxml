@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="556.0" prefWidth="970.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DriverDetailsController">
+   <children>
+      <TableView fx:id="driverTable" layoutX="37.0" layoutY="44.0" prefHeight="406.0" prefWidth="895.0">
+        <columns>
+          <TableColumn fx:id="nameCol" prefWidth="192.0" text="Name" />
+          <TableColumn fx:id="NICCol" prefWidth="173.0" text="NIC" />
+            <TableColumn fx:id="LicenseNoCol" prefWidth="183.0" text="License No" />
+            <TableColumn fx:id="addressCol" prefWidth="215.0" text="Address" />
+            <TableColumn fx:id="contactCol" prefWidth="130.0" text="Contact" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="windowCloseBtn" layoutX="37.0" layoutY="468.0" onAction="#windowClose" prefHeight="59.0" prefWidth="152.0" style="-fx-border-color: black; -fx-border-width: 2;" text="Close" />
+   </children>
+</AnchorPane>

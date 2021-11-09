@@ -1,0 +1,51 @@
+            if(cmbVehicleNo.getValue()!=null && cmbVehicleOwner.getValue()!=null ){
+            VehicleDetails v =  getVehicle(event);
+            String slot = null;
+
+            if(v == null){
+                lblAllocatedSlot.setText("\t ✘");
+            } else if(v.getVehicleType().equals("Bus")){
+                slot = "14";
+                lblAllocatedSlot.setText("\t 14");
+            }else if(v.getVehicleType().equals("Van")){
+                slot = Van.searchSlotVan();
+                lblAllocatedSlot.setText("\t "+slot);
+            }else if(v.getVehicleType().equals("CargoLorry")){
+                slot = CargoLorry.searchSlotCargoLorry();
+                lblAllocatedSlot.setText("\t "+ slot);
+            }
+
+            vehicleContainer[0][count]= slot;
+            vehicleContainer[1][count]= v;
+
+            System.out.println(vehicleContainer[0][count]);
+
+            VehicleDetails vehicle = (VehicleDetails) vehicleContainer[1][count];
+            System.out.println(vehicle.getVehicleNo());
+
+            String timeStamp = new SimpleDateFormat("yyyy / MM / dd - HH.mm").format(Calendar.getInstance().getTime());
+
+            assert v != null;
+            InParkingTableViewController.observableVanList.add(
+                    new InParkedVehicleDetails(v.getVehicleNo(), v.getVehicleType(), (String) vehicleContainer[0][count], timeStamp)
+            );
+
+            count++;
+
+
+        }else{
+            displayModalPopup(Alert.AlertType.ERROR,"Error","Please check weather the all fields are filled!!");
+        }
+
+
+
+
+
+
+        ///
+
+                for(int k = 0; k< count; k++){
+                    if(((VehicleDetails) vehicleContainer[1][k]).getVehicleNo().equals(v.getVehicleNo())){
+
+                    }
+                }

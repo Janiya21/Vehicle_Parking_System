@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="655.0" prefWidth="1086.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManagerOperationsController">
+   <children>
+      <ImageView fitHeight="118.0" fitWidth="116.0" layoutX="35.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/p2.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="180.0" layoutY="77.0" prefHeight="25.0" prefWidth="181.0" text="Saman Rice distributes">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="180.0" layoutY="102.0" prefHeight="21.0" prefWidth="130.0" text="Colombo, Sri Lanka" />
+      <Label layoutX="180.0" layoutY="56.0" prefHeight="21.0" prefWidth="197.0" text="VEHICLE PARKING SYSTEM">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="180.0" layoutY="123.0" prefHeight="21.0" prefWidth="140.0" text="Since 1990 ✪✪✪✪" />
+      <Label layoutX="67.0" layoutY="194.0" prefHeight="21.0" prefWidth="76.0" text="Vehicle In " />
+      <JFXComboBox fx:id="cmbVehicleIn" layoutX="170.0" layoutY="189.0" onAction="#comboAction" prefHeight="31.0" prefWidth="237.0" promptText="In Parking" />
+      <JFXButton fx:id="addVehicleBtn" layoutX="454.0" layoutY="177.0" onAction="#addVehicle" prefHeight="55.0" prefWidth="181.0" style="-fx-border-color: black; -fx-border-width: 2;" text="Add Vehicle">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXButton fx:id="addDriverBtn" layoutX="653.0" layoutY="177.0" onAction="#addDriver" prefHeight="55.0" prefWidth="181.0" style="-fx-border-color: black; -fx-border-width: 2;" text="Add Driver">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXButton fx:id="btnBack" layoutX="850.0" layoutY="177.0" onAction="#goBack" prefHeight="55.0" prefWidth="181.0" style="-fx-background-color: black;" text="Log Out" textFill="#eeebeb">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <AnchorPane fx:id="changingRoot" layoutY="254.0" prefHeight="402.0" prefWidth="1086.0" />
+      <JFXButton layoutX="454.0" layoutY="51.0" onAction="#showAllVehicles" prefHeight="42.0" prefWidth="574.0" style="-fx-background-color: #cccccc;" text="Show All Vehicles">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton layoutX="457.0" layoutY="113.0" onAction="#showAllDrivers" prefHeight="42.0" prefWidth="574.0" style="-fx-background-color: #cccccc;" text="Show All Drivers">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

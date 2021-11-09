@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="556.0" prefWidth="965.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.VehicleDetailsController">
+   <children>
+      <TableView fx:id="vehicleDetailsTbl" layoutX="40.0" layoutY="39.0" prefHeight="401.0" prefWidth="875.0">
+        <columns>
+          <TableColumn fx:id="vehicleNumberCol" prefWidth="234.0" text="Vehicle Number" />
+          <TableColumn fx:id="vehicleTypeCol" prefWidth="214.0" text="Vehice type" />
+            <TableColumn fx:id="maxWeightCol" prefWidth="222.0" text="Max Weight" />
+            <TableColumn fx:id="noOfPassCol" prefWidth="204.0" text="Number of Passengers" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="closeWindowBtn" layoutX="40.0" layoutY="469.0" onAction="#closeWindow" prefHeight="52.0" prefWidth="147.0" style="-fx-border-color: black; -fx-border-width: 2;" text="Colse" />
+   </children>
+</AnchorPane>

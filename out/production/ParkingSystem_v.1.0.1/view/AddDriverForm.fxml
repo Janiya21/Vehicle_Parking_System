@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="556.0" prefWidth="854.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddDriverFormController">
+   <children>
+      <FontAwesomeIconView glyphName="STREET_VIEW" layoutX="427.0" layoutY="94.0" size="70" />
+      <FontAwesomeIconView glyphName="PLUS" layoutX="379.0" layoutY="80.0" size="30" />
+      <JFXTextField fx:id="driverNameTxt" layoutX="156.0" layoutY="124.0" prefHeight="31.0" prefWidth="543.0" promptText="Driver name" />
+      <JFXTextField fx:id="NICTxt" layoutX="156.0" layoutY="180.0" prefHeight="31.0" prefWidth="543.0" promptText="NIC" />
+      <JFXTextField fx:id="LicenseNoTxt" layoutX="156.0" layoutY="229.0" prefHeight="31.0" prefWidth="543.0" promptText="Driving License No" />
+      <JFXButton fx:id="cancelBtn" layoutX="90.0" layoutY="459.0" onAction="#cancel" prefHeight="55.0" prefWidth="140.0" style="-fx-border-color: black; -fx-border-width: 2;" text="Cancel">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXButton fx:id="addDriverBtn" layoutX="635.0" layoutY="459.0" onAction="#addDriver" prefHeight="55.0" prefWidth="140.0" style="-fx-background-color: black;" text="Add Driver" textFill="#f8f4f4">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXTextField fx:id="contactNoTxt" layoutX="156.0" layoutY="369.0" prefHeight="31.0" prefWidth="543.0" promptText="Contact No" />
+      <JFXTextArea fx:id="addressTxt" layoutX="156.0" layoutY="285.0" prefHeight="55.0" prefWidth="543.0" promptText="Address" />
+   </children>
+</AnchorPane>
